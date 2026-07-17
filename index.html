@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños! 🎂</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: #ffe5ec;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #ff477e;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #6c757d;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        .btn-reclamar {
+            background: #ff477e;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 71, 126, 0.4);
+            width: 100%;
+        }
+
+        #pantalla-bono {
+            display: none;
+        }
+
+        .tarjeta-bono {
+            background: #fff0f3;
+            border: 3px dashed #ff758f;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .icono-regalo {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .titulo-bono {
+            color: #ff5c8a;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .codigo-barras {
+            font-family: monospace;
+            background: white;
+            padding: 8px;
+            border: 1px solid #dee2e6;
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            letter-spacing: 5px;
+        }
+
+        .terminos {
+            font-size: 11px;
+            color: #a3aab1;
+            line-height: 1.4;
+            text-align: justify;
+            border-top: 1px solid #ffccd5;
+            padding-top: 10px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- PANTALLA 1: EL MENSAJE INICIAL -->
+        <div id="pantalla-intriga">
+            <h1>¡Hola! ¡Feliz Cumpleaños! 🎉</h1>
+            <p>Tienes un regalo especial esperando por ti aquí abajo...</p>
+            <button class="btn-reclamar" onclick="revelarBono()">UNDIR AQUÍ PARA VER TU REGALO</button>
+        </div>
+
+        <!-- PANTALLA 2: EL BONO DE HELADO -->
+        <div id="pantalla-bono">
+            <div class="icono-regalo">🍦</div>
+            <h1>¡SORPRESA!</h1>
+            <div class="tarjeta-bono">
+                <div class="titulo-bono">Bono de Helado Especial</div>
+                <p style="margin-top:10px; color: #495057;">¡Válido para un  delicioso helado ! Invito yo. 🎈</p>
+                <div class="codigo-barras">|| HBD-HELADO-2026 ||</div>
+                
+                <!-- SECCIÓN DE TÉRMINOS Y CONDICIONES -->
+                <div class="terminos">
+                    * Términos y condiciones: Cupón personal e intransferible. Válido para este día tan especial. Vence muy pronto.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function revelarBono() {
+            document.getElementById('pantalla-intriga').style.display = 'none';
+            document.getElementById('pantalla-bono').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
